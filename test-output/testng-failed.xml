@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [mySuit]" guice-stage="DEVELOPMENT">
+  <parameter name="inputsheetname" value="InputSheetadorelease.xlsx"/>
+  <test thread-count="2" name="Launch Test(failed)">
+    <parameter name="testcaseName" value="Launch Test"/>
+    <classes>
+      <class name="com.ado.testCase.janrelease">
+        <parameter name="startRow" value="2"/>
+        <parameter name="endRow" value="3"/>
+        <methods>
+          <include name="validatemyifo"/>
+          <include name="setInputSheetName"/>
+          <include name="getSuitName"/>
+          <include name="setUp"/>
+          <include name="flush"/>
+          <include name="adminlogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.ado.testCase.janrelease -->
+    </classes>
+  </test> <!-- Launch Test(failed) -->
+</suite> <!-- Failed suite [mySuit] -->
